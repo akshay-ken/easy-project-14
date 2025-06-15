@@ -1,7 +1,9 @@
+import { MainCard } from "./components/MainCard";
+
 function App() {
   return (
     <>
-      <h1>testing</h1>
+      <MainCard />
     </>
   );
 }

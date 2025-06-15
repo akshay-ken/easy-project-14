@@ -1,1 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
 @import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-fuchsia-100 bg-no-repeat  bg-[url('../src/assets/images/bg-pattern-top-mobile.svg'),_url('../src/assets/images/bg-pattern-bottom-mobile.svg')] bg-position-[top_left,_bottom_right] md:bg-[url('../src/assets/images/bg-pattern-top-desktop.svg'),_url('../src/assets/images/bg-pattern-bottom-desktop.svg')] md:bg-position-[top_left,_bottom_right];
+
+    /* md:bg-position-[top_0rem_left_-1rem,top_5rem_left_22rem] */
+  }
+}
+
+@theme {
+  /* font */
+  --font-one: League Spartan;
+
+  /* Colors Primary */
+  --color-Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --color-Soft-Pink: hsl(333, 80%, 67%);
+  --color-Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --color-Light-Grayish-Magenta: hsl(300, 24%, 96%);
+}
