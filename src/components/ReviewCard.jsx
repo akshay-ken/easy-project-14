@@ -1,4 +1,14 @@
+import { useState } from "react";
+import likeIcon from "../assets/images/heartIcon.svg";
+
 export function ReviewCard({ personImage, personName, children }) {
+  const [likeCount, setLikeCount] = useState(0);
+
+  function handleLikeClick() {
+    setLikeCount((prevCount) => prevCount + 1);
+    setIsLiked(true);
+  }
+
   return (
     <>
       <div className="w-full font-one text-xl/6 felx flex-col p-6 bg-Very-Dark-Magenta rounded-xl">
@@ -8,6 +18,15 @@ export function ReviewCard({ personImage, personName, children }) {
             <p className=" text-white">{personName}</p>
             <p className="text-Soft-Pink">Verified Buyer</p>
           </div>
+          <p className="font-medium text-Soft-Pink text-2xl ml-auto">
+            {likeCount}
+          </p>
+          <button
+            onClick={handleLikeClick}
+            className="ml-auto active:scale-50 scale-100"
+          >
+            <img src={likeIcon} alt="" className="size-10" />
+          </button>
         </div>
         <p className="text-white">{children}</p>
       </div>
